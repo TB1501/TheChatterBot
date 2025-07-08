@@ -1,5 +1,4 @@
 import unittest
-import os
 from app import app
 from io import BytesIO
 
@@ -10,14 +9,12 @@ class FlaskAppTest(unittest.TestCase):
         app.config['TESTING'] = True
 
     def test_register_and_login(self):
-        # Register
         response = self.client.post('/register', data={
             'username': 'testuser',
             'password': 'testpass'
         }, follow_redirects=True)
         self.assertIn(b'Please log in', response.data)
 
-        # Login
         response = self.client.post('/login', data={
             'username': 'testuser',
             'password': 'testpass'
@@ -41,6 +38,5 @@ class FlaskAppTest(unittest.TestCase):
         response = self.client.post('/ask', json={})
         self.assertEqual(response.status_code, 400)
 
-# Run the tests
 if __name__ == '__main__':
     unittest.main()
