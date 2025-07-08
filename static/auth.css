@@ -1,0 +1,124 @@
+/* Reset and base layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 2rem;
+    background-color: #000;
+    color: #0f0;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  /* Page title */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0f0;
+    text-align: center;
+  }
+  
+  /* Form layout */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: #111;
+    padding: 2rem;
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+  
+  /* Input and button styling */
+  input, button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #0f0;
+    background-color: #111;
+    color: #0f0;
+  }
+  
+  button {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0f0;
+    color: #000;
+  }
+  
+  /* Link */
+  a {
+    color: #0f0;
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+  
+  a:hover {
+    color: #8f8;
+  }
+  
+  /* Flash message box */
+  .flashes {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .flashes .error {
+    color: red;
+  }
+  
+  .flashes .success {
+    color: #0f0;
+  }
+
+
+  /* Nav button */
+  
+  nav {
+    width: 100%;
+    background-color: #222;
+    padding: 1rem 2rem;
+    color: #0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    margin-bottom: 2rem;
+  }
+  
+  nav a {
+    color: #0f0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #8f8;
+    text-decoration: underline;
+  }
+  

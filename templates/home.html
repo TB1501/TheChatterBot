@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Home page ChatterBot">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/home.css" />
+</head>
+<body>
+
+  <nav>
+    <div><strong>The ChatterBot</strong></div>
+    <div>
+      {% if 'user' in session %}
+        <a href="/chat">Chat</a>
+        <a href="/logout">Logout</a>
+      {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      {% endif %}
+    </div>
+  </nav>
+
+  <h1>Welcome to ChatterBot your online AI generated chatbot!</h1>
+  <div class="content">
+    <h2>About:</h2>
+    <p>
+        ChatterBot is an AI powered chatbot that helps you analyze your PDF documents. The ChatterBots AI is based on the Ollama framework.
+        Ollama is a lightweight, extensible framework for building and running language models on the local machine released by Meta AI. 
+        It provides a simple API for creating, running, and managing models, as well as a library of pre-built models that can be easily used in a variety of applications.
+        The LLM used for ChatterBot is the Llama 3. <br><br>
+    </p>
+    <h2>Getting started:</h2>
+    <p>For getting started, download Ollama from the official <a href="https://ollama.com/">website</a> for your OS. After downloading Ollama 
+        and installing, open the CMD and type:"ollama run llama3" and then press enter. After running Llama 3 you only need to register your account.
+
+    </p>
+</div>
+<h1>Happy chating!🤖</h1>
+
+</body>
+</html>

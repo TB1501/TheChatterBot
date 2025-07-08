@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #ddd;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Nav bar */
+
+nav {
+    background-color: #222;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0f0;
+    border-bottom: 1px solid #444;
+  }
+  nav a {
+    color: #0f0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+/* Title style */
+#title{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f0;
+    font-size: 2rem;
+}
+
+/* Responsive Upload Section */
+#upload-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Drop Zone - Clickable + Display filename */
+#drop-zone {
+    flex: 1 1 100%;
+    min-width: 250px;
+    border: 2px dashed #444;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #111;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ccc;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+/* Analyze Button Section */
+#upload-controls {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Responsive tweak */
+@media (min-width: 600px) {
+    #drop-zone {
+        flex: 1 1 60%;
+        margin-bottom: 0;
+    }
+    #upload-controls {
+        flex: 1 1 35%;
+        align-items: flex-end;
+    }
+}
+
+/* Card Header Styling */
+.card-header {
+    background-color: #111;
+    color: #ccc;
+    font-weight: bold;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #333;
+}
+
+/* Chat Box Styling */
+#chat-box {
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #000;
+    height: 300px;
+    overflow-y: scroll;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#chat-box p {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+
+/* User and Bot Message Styling */
+#chat-box p:nth-child(odd) {
+    background-color: #111;
+    color: #ccc;
+}
+
+#chat-box p:nth-child(even) {
+    background-color: #000;
+    color: #00ff00;
+}
+
+/* Message Labels */
+.user-label {
+    color: #00bfff;
+    font-weight: bold;
+}
+
+.bot-label {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+/* Text Input */
+#user-input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #111;
+    color: #eee;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Scrollbar Customization */
+#chat-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+#chat-box::-webkit-scrollbar-track {
+    background-color: #111;
+}
+
+/* Buttons */
+.btns{
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #222;
+    color: #0f0;
+}
+
+
+.btns-primary:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+
