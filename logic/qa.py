@@ -5,6 +5,7 @@ from langchain_ollama import OllamaLLM
 from langchain.prompts import PromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
+import os
 
 #db for processed data
 folder_path = "db"
@@ -13,7 +14,8 @@ folder_path = "db"
 embedding = FastEmbedEmbeddings()
 
 #LLM model
-llm = OllamaLLM(model="llama3")
+ollama_url = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+llm = OllamaLLM(model="llama3", base_url=ollama_url)
 
 #input for AI behavior
 raw_prompt = PromptTemplate.from_template("""

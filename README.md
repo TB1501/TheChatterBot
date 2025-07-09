@@ -48,4 +48,16 @@ This project integrates the following components:
 
 9. Chat with bot
 
+**Alternative**:
+
+1. Download. install and run the Ollama llama3 on your local machine:
+    ```sh
+    ollama pull llama3
+    ```
+2. Clone the imahe from dockerhub and run it:
+    ```sh
+    docker pull bit1501/the-chatter-bot-flask:latest
+    docker run -p 8080:8080 --env OLLAMA_HOST=http://host.docker.internal:11434 bit1501/the-chatter-bot-flask:latest
+    ```
+
 ## 🤖 Happy Chating!
