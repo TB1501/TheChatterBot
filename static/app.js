@@ -1,4 +1,3 @@
-// Send message to AI
 function sendMessage() {
     const input = document.getElementById("user-input");
     const message = input.value.trim();
@@ -39,7 +38,6 @@ function clearChat() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Upload PDF
     function uploadPDF() {
         const fileInput = document.getElementById('pdf-upload');
         const file = fileInput.files[0];
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Enable Enter key to send message
     document.getElementById("user-input").addEventListener("keydown", function(event) {
         if (event.key === "Enter" && !event.shiftKey) {
             event.preventDefault();
@@ -75,15 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Drag-and-drop and click-to-upload logic
+    // Drop tone
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('pdf-upload');
     const fileNameSpan = document.getElementById('selected-filename');
-
-    // Click drop zone to open file picker
     dropZone.addEventListener('click', () => fileInput.click());
 
-    // File selected via click
+    // File selection
     fileInput.addEventListener('change', () => {
         const file = fileInput.files[0];
         fileNameSpan.textContent = file ? file.name : "No file selected.";
@@ -95,18 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Drag over
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
         dropZone.classList.add('dragover');
     });
 
-    // Drag leave
     dropZone.addEventListener('dragleave', () => {
         dropZone.classList.remove('dragover');
     });
 
-    // File dropped
     dropZone.addEventListener('drop', (e) => {
         e.preventDefault();
         dropZone.classList.remove('dragover');

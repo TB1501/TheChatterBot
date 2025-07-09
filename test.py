@@ -29,14 +29,16 @@ class FlaskAppTest(unittest.TestCase):
             response = self.client.post('/pdf', content_type='multipart/form-data', data=data)
             self.assertEqual(response.status_code, 200)
             self.assertIn(b'Successfully uploaded', response.data)
+    
+    def test_ask_missing_query(self):
+        response = self.client.post('/ask', json={})
+        self.assertEqual(response.status_code, 400)
 
     def test_missing_pdf(self):
         response = self.client.post('/pdf', data={})
         self.assertEqual(response.status_code, 400)
 
-    def test_ask_missing_query(self):
-        response = self.client.post('/ask', json={})
-        self.assertEqual(response.status_code, 400)
+
 
 if __name__ == '__main__':
     unittest.main()

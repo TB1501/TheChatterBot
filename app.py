@@ -5,7 +5,6 @@ from logic.qa import answer_query
 
 
 
-#Import the Flask web framework
 app = Flask(__name__)
 app.secret_key = 'test_secret_key'
 
@@ -13,28 +12,27 @@ app.secret_key = 'test_secret_key'
 users={}
 
 
-#Route to home
 @app.route('/')
 def home():
     return render_template('home.html')
 
-#Route to registration
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     return handle_register(request, users)
 
-#Route to login
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return handle_login(request, users)
 
-#Handling the logout
+
 @app.route('/logout')
 def logout():
     session.pop('user', None)
     return redirect(url_for('home'))
 
-#Route to main page
+
 @app.route('/chat')
 def chat():
     return render_template('chat.html')

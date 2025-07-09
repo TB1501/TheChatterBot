@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, flash, session
 
-#Handling the registration
+
 def handle_register(request, users):
     if request.method == 'POST':
         username = request.form['username']
@@ -13,7 +13,7 @@ def handle_register(request, users):
         return redirect(url_for('login'))
     return render_template('register.html')
 
-#Handling the login
+
 def handle_login(request, users):
     if request.method == 'POST':
         username = request.form['username']
