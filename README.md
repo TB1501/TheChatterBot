@@ -1,11 +1,51 @@
-The ChatterBot
+The ChatterBot is an AI powered chatbot that helps you analyze your PDF documents. The ChatterBots AI is based on the Ollama framework.
 
-About:
-ChatterBot is an AI powered chatbot that helps you analyze your PDF documents. The ChatterBots AI is based on the Ollama framework.
-Ollama is a lightweight, extensible framework for building and running language models on the local machine released by Meta AI. 
-It provides a simple API for creating, running, and managing models, as well as a library of pre-built models that can be easily 
-used in a variety of applications. The LLM used for ChatterBot is the Llama 3.
+## Components
 
-Getting started:
-For getting started, download Ollama from the official website (https://ollama.com/) for your OS. After downloading Ollama
-and installing, open the CMD and type:"ollama run llama3" and then press enter. After running Llama 3 you only need to register your account.
+This project integrates the following components:
+
+- **Flask**: For the web interface and routing.
+- **LangChain**: Powers the document chains and retrieval logic.
+- **Chroma**: Vector store for document chunk embeddings.
+- **FastEmbedEmbeddings**: To embed document content efficiently.
+- **Ollama + LLaMA3**: Local language model for response generation.
+
+## Setup and Deployment
+
+**Requirments**:
+1. Python 3.10+
+2. Pip
+3. Ollama [Ollama's official website](https://ollama.com/download) downloaded and installed for your OS
+
+**Install dependencies**:
+
+1. Run the llama3 model in CMD:
+    ```sh
+    ollama pull llama3
+    ```
+2. Clone the repository and navigate to the project folder:
+    ```sh
+    https://github.com/TB1501/TheChatterBot.git
+    ```
+3. Create a virtual environment:
+    ```sh
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+4. Install the required libraries:
+    ```sh
+    pip install -r requirements.txt
+    ```
+5. Run the application:
+    ```sh
+    py app.py
+    ```
+6. Navigate to `http://localhost:8080/`**
+
+7. Register
+
+8. Login
+
+9. Chat with bot
+
+## 🤖 Happy Chating!
